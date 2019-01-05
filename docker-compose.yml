@@ -1,0 +1,21 @@
+version: '2'
+services:
+  tracker-server:
+    image: beaock/nginx-fastdfs
+    #volumes:
+      #- "./docker/fastdfs-tracker:/etc/fdfs/"
+    network_mode: "host"
+    command: "./tracker.sh" 
+ 
+  storage-server:
+    image: beaock/nginx-fastdfs
+    volumes:
+      - "./docker/storage_base_path:/data/fast_data"
+      #- "./docker/store_path0:/fastdfs/store_path"
+    environment:
+      TRACKER_SERVER: "192.168.65.3:22122"
+      GROUP_NAME: "M00"
+    network_mode: "host"
+    command: "./storage.sh"
+
+ 
