@@ -28,7 +28,8 @@ services:
     command: "./storage.sh"
   
   ```
-    
+  
+ 3.执行 `docker-compose up` 命令
     
     
 ### 查看TRACKER_SERVER容器ip地址的方法
