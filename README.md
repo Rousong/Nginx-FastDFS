@@ -35,7 +35,7 @@ services:
 1. 进入tracker容器内部
 > docker exec -i -t <tracker容器的名字> /bin/bash
 2. 一般要先执行
-> apt-get install update
+> apt-get update
 3. 安装ifconfig命令
 > apt-get install net-tools
 4. 然后输入ifconfig 然后看到eth0的ip地址就是tracker的ip地址了 端口默认是22122
